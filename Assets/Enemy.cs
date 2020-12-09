@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour
     private Vector3 currentTarget;
     private float time = 0f;
     private float speed = 1f;
-    [SerializeField] GameObject _gameState;
     public static Enemy Instance;
+    private float numberLives = 1;
     void Awake() {
         Instance = this;
     }
@@ -33,14 +33,30 @@ public class Enemy : MonoBehaviour
         if(this.transform.position == boardPos[pos+1]) {
             pos += 1;
             if(pos >= boardPos.Length-1) {
+                GameObject enemySpawner2 = GameObject.FindWithTag("Spawner");
+                EnemySpawner enemySpawner = enemySpawner2.GetComponent<EnemySpawner>();
+                enemySpawner.removeElementFromList(this.gameObject);
                 Destroy(this);
                 GameState.Instance.decreaseLives();
             }
             time = 0;
         }
+
     }
     public void instantiateSpeed(float speed2) {
         this.speed = speed2;
+    }
+    public void instantiateLives(float lives2) {
+        this.numberLives = lives2;
+    }
+    public void reduceLivesByOne() {
+        this.numberLives-=1;
+        if(this.numberLives == 1) {
+            this.GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+    }
+    public float getNumberLives() {
+        return this.numberLives;
     }
 
     

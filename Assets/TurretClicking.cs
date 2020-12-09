@@ -24,14 +24,18 @@ public class TurretClicking : MonoBehaviour
     {
 
         if(placeSingleTurret && Input.GetMouseButtonDown(0) && !GameState.Instance.returnGameOver() && GameState.Instance.hasGoldForSingle()) { //detects a click of the mouse
-            Instantiate(tower1Prefab,Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100)), Quaternion.identity);
-            placeSingleTurret = false;
-            GameState.Instance.decreaseGoldForSingle();
+            if(canPlace()) {
+                Instantiate(tower1Prefab,Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100)), Quaternion.identity);
+                placeSingleTurret = false;
+                GameState.Instance.decreaseGoldForSingle();
+            }
         }
         if(placeDoubleTurret && Input.GetMouseButtonDown(0) && !GameState.Instance.returnGameOver() && GameState.Instance.hasGoldForDouble()) {
-            Instantiate(tower2Prefab,Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 90)), Quaternion.identity);
-            placeDoubleTurret = false;
-            GameState.Instance.decreaseGoldForDouble();
+            if(canPlace()){
+                Instantiate(tower2Prefab,Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 90)), Quaternion.identity);
+                placeDoubleTurret = false;
+                GameState.Instance.decreaseGoldForDouble();
+            }
         }
     }
     void clickTurret() {
@@ -40,5 +44,16 @@ public class TurretClicking : MonoBehaviour
     }
     void clickDoubleTurret() {
         placeDoubleTurret = true;
+    }
+    bool canPlace() {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+        if(hit.collider != null)
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

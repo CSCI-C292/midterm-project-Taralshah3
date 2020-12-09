@@ -15,10 +15,13 @@ public class GameState : MonoBehaviour
     [SerializeField] GameObject _gameOverText;
     [SerializeField] GameObject _livesText;
     [SerializeField] GameObject _waveText;
+    [SerializeField] GameObject _waveGameOverText;
     public static GameState Instance;
     bool _isGameOver = false;
     public Button nextWaveButton;
     public GameObject restartButton;
+    public Button lightningButton;
+    bool canUseLightning = true;
 
     void Awake() {
         Instance = this;
@@ -26,6 +29,7 @@ public class GameState : MonoBehaviour
     void Start()
     {
         this.nextWaveButton.onClick.AddListener(waveFunc);
+        this.lightningButton.onClick.AddListener(lightning);
         this.restartButton.GetComponent<Button>().onClick.AddListener(restartFunc);
         
     }
@@ -38,8 +42,18 @@ public class GameState : MonoBehaviour
             _isGameOver = true;   
             _gameOverText.SetActive(true);
             restartButton.SetActive(true);
+            waveTextGameOver();
+            _waveGameOverText.SetActive(true);
         }
         
+    }
+    public void lightning() {
+        if(canUseLightning) {
+            EnemySpawner.Instance.clearEnemyList();
+            canUseLightning = false;
+        }
+        
+        //Debug.Log(3);
     }
     public void restartFunc() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -47,6 +61,9 @@ public class GameState : MonoBehaviour
     public void increaseGold() {
         gold += goldForKill;
         _goldText.GetComponent<Text>().text = "Gold: "  + gold;
+    }
+    public void waveTextGameOver() {
+        _waveGameOverText.GetComponent<Text>().text = "You survived "  + waveNumber + " waves";
     }
     public void decreaseGoldForSingle() {
         gold -= 100;
@@ -79,7 +96,7 @@ public class GameState : MonoBehaviour
         }
     }
      public bool hasGoldForDouble() {
-        if(gold>=150) {
+        if(gold>=100) {
             return true;
         }
         else {
@@ -88,6 +105,9 @@ public class GameState : MonoBehaviour
     }
     public void waveFunc() {
         EnemySpawner.Instance.startSpawn();
+    }
+    public int getWaveNumber() {
+        return this.waveNumber;
     }
     
     
