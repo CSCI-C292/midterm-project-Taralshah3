@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{65b97fb0-06c4-24f7-d8d9-2df32544a7f4}</ProjectGuid>
+    <ProjectGuid>{77c609a4-5aeb-dd31-a6cd-ab7fc113f47b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.TestRunner</AssemblyName>
@@ -341,7 +341,7 @@
         <HintPath>D:/Documents/2019.4.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:/Users/Taral/Documents/GitHub/Castle Defense/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>C:/Users/Taral/Documents/GitHub/midterm-project-Taralshah3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/Documents/2019.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

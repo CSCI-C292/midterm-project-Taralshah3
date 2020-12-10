@@ -96,7 +96,7 @@ public class GameState : MonoBehaviour
         }
     }
      public bool hasGoldForDouble() {
-        if(gold>=100) {
+        if(gold>=150) {
             return true;
         }
         else {

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{382ea99a-d217-0494-8ee9-888ef4b70102}</ProjectGuid>
+    <ProjectGuid>{e8e42403-2046-3196-0ca6-24cd76f98fe7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Animation.Runtime</AssemblyName>
@@ -598,27 +598,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{831ab871-2997-6a1d-77ac-42d34e6bcc99}</Project>
+      <Project>{f4b3971c-736c-1d9d-2c48-112a3790544f}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{09c43cce-d146-676b-84d3-e5468790109d}</Project>
+      <Project>{38a18c02-33f6-4aeb-23eb-ca2eea039c98}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{21431fea-dc1d-8426-74bf-bae791ad6491}</Project>
+      <Project>{5963e46a-6d52-0d15-4c4d-4c24c1837ad9}</Project>
       <Name>Unity.Mathematics</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{375486d3-54b6-5dd1-bf37-576d2567886b}</Project>
+      <Project>{c493f816-7ef8-266a-dde4-401b847cc83e}</Project>
       <Name>UnityEditor.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{8f5c414c-97b6-a84c-5ab9-361ac427e698}</Project>
+      <Project>{a631a5d5-544e-4229-f795-26d202767e4e}</Project>
       <Name>UnityEngine.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

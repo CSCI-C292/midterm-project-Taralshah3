@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{c33352cd-b35a-31b3-2ac9-244526652c24}</ProjectGuid>
+    <ProjectGuid>{01ab42eb-5079-cabc-1e12-28dee0885a8b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Rider.Editor</AssemblyName>
@@ -254,7 +254,7 @@
         <HintPath>D:/Documents/2019.4.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:/Users/Taral/Documents/GitHub/Castle Defense/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>C:/Users/Taral/Documents/GitHub/midterm-project-Taralshah3/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>D:/Documents/2019.4.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -613,17 +613,17 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{e3810056-219c-2411-5e5a-091743fa2ddb}</Project>
+      <Project>{39e2e025-baac-1ab1-cf13-aa3ee1f3b921}</Project>
       <Name>UnityEditor.TestRunner</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{375486d3-54b6-5dd1-bf37-576d2567886b}</Project>
+      <Project>{c493f816-7ef8-266a-dde4-401b847cc83e}</Project>
       <Name>UnityEditor.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{8f5c414c-97b6-a84c-5ab9-361ac427e698}</Project>
+      <Project>{a631a5d5-544e-4229-f795-26d202767e4e}</Project>
       <Name>UnityEngine.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
