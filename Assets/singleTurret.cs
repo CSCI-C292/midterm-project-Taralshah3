@@ -20,6 +20,7 @@ public class singleTurret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        minDistance = 99999;
         enemyList = enemySpawner.getEnemyList();
         if(!(enemyList.Count == 0)) {
             GameObject enemy3 = enemyList[0];
@@ -38,7 +39,6 @@ public class singleTurret : MonoBehaviour
             enemy3 = minDistanceObject;
             //transform.right = enemy3.transform.position - transform.position;
             gameObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, enemy3.transform.position - gameObject.transform.position);
-            //look up 2d joystick games handle firing of the bullets 
 
         }
     }
@@ -46,6 +46,8 @@ public class singleTurret : MonoBehaviour
         if(!(enemyList.Count == 0)) {
             if(!(enemyList.Count == 0) && minDistance < 4) {
                 Instantiate(_rocketPrefab,new Vector3(transform.position.x,transform.position.y,-50),Quaternion.identity);
+                //Debug.Log(minDistance);
+                
             }
             else {
             }
